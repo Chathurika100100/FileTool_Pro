@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileTool Pro - Online File Size Calculator & Analyzer</title>
+    <meta name="description" content="Calculate file sizes, download times, and get storage recommendations with our professional file size calculator tool.">
+    <meta name="keywords" content="file size calculator, download time calculator, storage analyzer, file converter">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">FileTool Pro</h1>
+            <p class="tagline">Professional File Size Calculator & Analyzer</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="tool-section">
+                <h2>File Size Calculator</h2>
+                <div class="calculator-card">
+                    <div class="input-group">
+                        <label for="fileSize">Enter File Size:</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="fileSize" placeholder="Enter size" min="0" step="0.01">
+                            <select id="sizeUnit">
+                                <option value="MB">MB</option>
+                                <option value="GB">GB</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="calculateBtn" class="btn-primary">Calculate</button>
+                </div>
+
+                <div id="results" class="results-section" style="display: none;">
+                    <h3>Calculation Results</h3>
+                    <div class="result-card">
+                        <h4>File Size Conversions</h4>
+                        <div class="result-item">
+                            <span class="label">Size in MB:</span>
+                            <span id="sizeMB" class="value"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Size in GB:</span>
+                            <span id="sizeGB" class="value"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Size in KB:</span>
+                            <span id="sizeKB" class="value"></span>
+                        </div>
+                    </div>
+
+                    <div class="result-card">
+                        <h4>Estimated Download Times</h4>
+                        <div class="result-item">
+                            <span class="label">At 5 Mbps:</span>
+                            <span id="download5mbps" class="value"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">At 10 Mbps:</span>
+                            <span id="download10mbps" class="value"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">At 20 Mbps:</span>
+                            <span id="download20mbps" class="value"></span>
+                        </div>
+                    </div>
+
+                    <div class="result-card">
+                        <h4>Storage Recommendations</h4>
+                        <div id="storageTips" class="storage-tips"></div>
+                    </div>
+
+                    <div class="advanced-section">
+                        <p class="advanced-message">To access advanced analysis, continue</p>
+                        <div class="countdown-wrapper">
+                            <span id="countdown" class="countdown">5</span>
+                            <span class="countdown-text">seconds remaining</span>
+                        </div>
+                        <button id="continueBtn" class="btn-secondary" disabled>Continue to Advanced Tool</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2024 FileTool Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
